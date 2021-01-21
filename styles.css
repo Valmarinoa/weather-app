@@ -166,6 +166,8 @@ img {
   display: inline;
   margin: 0 auto;
   margin-bottom: 30px;
+  position: relative;
+  bottom: 20px;
 }
 .repository:hover {
   font-weight: 400px;
