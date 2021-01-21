@@ -59,6 +59,11 @@ h1 {
   padding: 0;
   transition: none;
 }
+#btn:hover {
+  color: rgb(1, 236, 40);
+  transform: scale(2.1, 2.1);
+  cursor: pointer;
+}
 il {
   margin-bottom: 20px;
   margin-top: 90px;
@@ -154,7 +159,7 @@ img {
   color: aliceblue;
   font-size: 10px;
   font-weight: 300;
-  display: block;
+  display: inline;
   margin: 0 auto;
   margin-bottom: 30px;
 }
