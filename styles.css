@@ -65,7 +65,7 @@ h1 {
 }
 #btn:hover {
   color: rgb(1, 236, 40);
-  transform: scale(2.1, 2.1);
+  transform: scale(1.9, 1.9);
   cursor: pointer;
 }
 il {
@@ -170,10 +170,14 @@ img {
   bottom: -20px;
   text-decoration: none;
 }
+.repository:hover {
+  text-decoration: none;
+}
 strong {
   text-decoration: underline;
+  color: aliceblue;
 }
-.repository:hover {
+strong:hover {
   font-weight: 400px;
   color: rgb(1, 236, 40);
   cursor: pointer;
