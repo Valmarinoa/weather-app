@@ -41,6 +41,9 @@ h1 {
   border: none;
   outline: 1px aliceblue solid;
 }
+#search-input:hover {
+  outline: 1px rgb(1, 236, 40) solid;
+}
 ::placeholder {
   color: rgba(240, 248, 255, 0.7);
 }
