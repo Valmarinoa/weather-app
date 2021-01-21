@@ -161,7 +161,7 @@ img {
 }
 .repository {
   color: aliceblue;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
   display: inline;
   margin: 0 auto;
@@ -174,5 +174,4 @@ img {
   color: rgb(1, 236, 40);
   cursor: pointer;
   margin-bottom: 30px;
-  text-decoration: underline;
 }
