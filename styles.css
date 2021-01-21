@@ -12,6 +12,7 @@ section {
   border-radius: 8px;
   box-shadow: 2px 2px 2px 2px rgba(188, 202, 200, 0.918);
   margin-top: 20px;
+  padding-bottom: 70px;
 
   width: 50%;
 }
@@ -167,5 +168,6 @@ img {
   font-weight: 400px;
   color: rgb(1, 236, 40);
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  text-decoration: underline;
 }
