@@ -1,4 +1,4 @@
-function formatDate(date) {
+/*function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -23,7 +23,7 @@ function formatDate(date) {
 let currentTime = new Date();
 let todaysDate = document.querySelector("#date");
 todaysDate.innerHTML = formatDate(currentTime);
-
+*/
 function formatTime(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
