@@ -24,6 +24,29 @@ let currentTime = new Date();
 let todaysDate = document.querySelector("#date");
 todaysDate.innerHTML = formatDate(currentTime);
 
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let days = [
+    "sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
+
 function showTemp(response) {
   console.log(response);
   let temp = document.querySelector("#temp");
@@ -36,6 +59,8 @@ function showTemp(response) {
   humidityInput.innerHTML = response.data.main.humidity;
   let windInput = document.querySelector("#wind-input");
   windInput.innerHTML = Math.round(response.data.main.wind.speed);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatTime(response.data.dt * 1000);
 }
 function searchCity(city) {
   let apiKey = "10d192ec318619645a213567f8693645";

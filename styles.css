@@ -138,6 +138,8 @@ il {
   color: aliceblue;
   font-size: 15px;
   font-weight: 300;
+}
+.comment ::first-letter {
   text-transform: capitalize;
 }
 .card {
