@@ -109,13 +109,17 @@ il {
   text-align: left;
   color: aliceblue;
   font-weight: 300;
-  width: 20%;
+  width: fixed 20%;
   padding: 0;
   position: relative;
   float: right;
   left: -100px;
   top: 53px;
   line-height: 12px;
+}
+#humidity-input,
+#wind-input {
+  font-weight: 400;
 }
 
 #date {
@@ -134,6 +138,7 @@ il {
   color: aliceblue;
   font-size: 15px;
   font-weight: 300;
+  text-transform: capitalize;
 }
 .card {
   background-color: rgba(239, 248, 254, 0.08);
