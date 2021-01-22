@@ -32,6 +32,10 @@ function showTemp(response) {
   cityElement.innerHTML = response.data.name;
   document.querySelector(".comment").innerHTML =
     response.data.weather[0].description;
+  let humidityInput = document.querySelector("#humidity-input");
+  humidityInput.innerHTML = response.data.main.humidity;
+  let windInput = document.querySelector("#wind-input");
+  windInput.innerHTML = Math.round(response.data.main.wind.speed);
 }
 function searchCity(city) {
   let apiKey = "10d192ec318619645a213567f8693645";
