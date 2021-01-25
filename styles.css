@@ -13,10 +13,16 @@ section {
   box-shadow: 2px 2px 2px 2px rgba(188, 202, 200, 0.918);
   margin-top: 20px;
   padding-bottom: 70px;
-
-  width: 50%;
+  width: 800px;
 }
-
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  margin-left: auto;
+  margin-right: auto;
+}
 h1 {
   margin-top: 30px;
   margin-bottom: 0px;
@@ -26,12 +32,13 @@ h1 {
   font-size: 70px;
   font-weight: 500;
   mix-blend-mode: overlay;
-  width: 90%;
+  width: fixed 90%;
   text-align: center;
 }
 
 #search-form {
   background-color: transparent;
+  width: fixed;
 }
 #search-input:focus {
   color: aliceblue;
@@ -40,6 +47,7 @@ h1 {
   background: transparent;
   border: none;
   outline: 1px aliceblue solid;
+  width: fixed;
 }
 #search-input:hover {
   outline: 1px rgb(1, 236, 40) solid;
@@ -62,6 +70,7 @@ h1 {
   cursor: pointer;
   padding: 0;
   transition: none;
+  width: fixed;
 }
 #btn:hover {
   color: rgb(1, 236, 40);
@@ -72,6 +81,11 @@ il {
   margin-bottom: 20px;
   margin-top: 90px;
   margin-left: 65px;
+}
+
+.weather-temperature {
+  margin-left: auto;
+  margin-right: auto;
 }
 #temp {
   font-size: 90px;
@@ -87,22 +101,37 @@ il {
   position: relative;
   left: 45px;
   padding-left: 0%;
+  width: fixed;
 }
-
+.weather-temperature #temp {
+  text-align: center;
+}
+#units {
+  position: relative;
+  top: -50px;
+  left: -10px;
+}
+#units,
 #centigrados,
 #fahrenheit {
   line-height: 1;
   font-size: 20px;
-  position: relative;
   top: -50px;
   left: -10px;
   text-decoration: none;
   color: aliceblue;
 }
-#fahrenheit {
-  left: -10px;
-  right: 10px;
+
+#centigrados:hover {
+  color: rgb(1, 236, 40);
+  cursor: pointer;
 }
+
+#fahrenheit:hover {
+  color: rgb(1, 236, 40);
+  cursor: pointer;
+}
+
 #extras {
   font-size: 14px;
   display: block;
@@ -156,15 +185,10 @@ section {
 .row {
   text-align: center;
   padding: 200;
-  width: 100%;
   height: 180px;
-  margin-left: 0;
-  margin-right: 0;
-}
-img {
-  height: 70px;
-  margin-bottom: 10px;
-  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
 }
 .repository {
   color: aliceblue;
@@ -176,6 +200,7 @@ img {
   position: relative;
   bottom: -20px;
   text-decoration: none;
+  width: fixed;
 }
 .repository:hover {
   text-decoration: none;

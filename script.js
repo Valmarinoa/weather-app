@@ -48,7 +48,6 @@ function formatTime(timestamp) {
 }
 
 function showTemp(response) {
-  console.log(response);
   let temp = document.querySelector("#temp");
   temp.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("h1");
@@ -58,9 +57,41 @@ function showTemp(response) {
   let humidityInput = document.querySelector("#humidity-input");
   humidityInput.innerHTML = response.data.main.humidity;
   let windInput = document.querySelector("#wind-input");
-  windInput.innerHTML = Math.round(response.data.main.wind.speed);
+  windInput.innerHTML = Math.round(response.data.wind.speed);
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatTime(response.data.dt * 1000);
+  let icon = document.querySelector("#icon");
+  icon.setAttribute =
+    ("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  icon.setAttribute = ("alt", `${response.data.weather[0].description}`);
+  celTemp = Math.round(response.data.main.temp);
+}
+
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast-row");
+  let forecast = null;
+  forecastElement.innerHTML = null;
+
+  for (let index = 1; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+  <div class="col">
+        <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Wed</h5>
+                <h6>
+                <img src= "http://openweathermap.org/img/wn/${
+                  response.data.forecast[0].icon
+                }@2x.png";
+                      alt="${forecast.weather[0].description}"></h6>
+                <p class="card-text">${Math.round(
+                  forecast.main.temp_max
+                )}° | ${Math.round(forecast.main.temp_min)}°</p>
+              </div>
+              </div>
+            </div>`;
+  }
 }
 function searchCity(city) {
   let apiKey = "10d192ec318619645a213567f8693645";
@@ -68,7 +99,12 @@ function searchCity(city) {
   let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?q=";
   let apiUrl = `${apiEndPoint}${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemp);
+
+  let apiUrlForecast = "https://api.openweathermap.org/data/2.5/forecast?q=";
+  let forecastUrl = `${apiUrlForecast}${city}&appid=${apiKey}&units=${units}`;
+  axios.get(forecastUrl).then(displayForecast);
 }
+
 function handleCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -76,8 +112,20 @@ function handleCity(event) {
   h1.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleCity);
+
+function showFahTemp(event) {
+  event.preventDefault();
+  let fahFormula = (celTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(fahFormula);
+}
+
+function showCelTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celTemp);
+}
+
 function showMyPosition(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
@@ -91,5 +139,17 @@ function currentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showMyPosition);
 }
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleCity);
+
+let celTemp = null;
+
 let pin = document.querySelector("#btn");
 pin.addEventListener("click", currentPosition);
+
+let fahLink = document.querySelector("#fahrenheit");
+fahLink.addEventListener("click", showFahTemp);
+
+let celsius = document.querySelector("#centigrados");
+celsius.addEventListener("click", showCelTemp);
