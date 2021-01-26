@@ -72,7 +72,6 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast-row");
   let forecast = null;
   forecastElement.innerHTML = null;
-
   for (let index = 1; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
@@ -82,7 +81,7 @@ function displayForecast(response) {
                 <h5 class="card-title">Wed</h5>
                 <h6>
                 <img src= "http://openweathermap.org/img/wn/${
-                  response.data.forecast[0].icon
+                  forecast.weather[0].icon
                 }@2x.png";
                       alt="${forecast.weather[0].description}"></h6>
                 <p class="card-text">${Math.round(

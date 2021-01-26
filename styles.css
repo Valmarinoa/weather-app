@@ -38,7 +38,7 @@ h1 {
 
 #search-form {
   background-color: transparent;
-  width: fixed;
+  width: auto;
 }
 #search-input:focus {
   color: aliceblue;
@@ -145,6 +145,7 @@ il {
   left: -100px;
   top: 53px;
   line-height: 12px;
+  tranlate
 }
 #humidity-input,
 #wind-input {
@@ -154,9 +155,9 @@ il {
 #date {
   position: relative;
   margin-top: -30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: 0px;
-  top: -20px;
+  top: -30px;
   bottom: 20px;
   color: aliceblue;
   font-size: 22px;
@@ -181,14 +182,7 @@ il {
 section {
   display: inline-block;
   text-align: center;
-}
-.row {
-  text-align: center;
-  padding: 200;
-  height: 180px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
+
 }
 .repository {
   color: aliceblue;
