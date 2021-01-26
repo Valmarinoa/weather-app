@@ -13,11 +13,14 @@ section {
   box-shadow: 2px 2px 2px 2px rgba(188, 202, 200, 0.918);
   margin-top: 20px;
   padding-bottom: 70px;
-  width: 800px;
+  width: 700px;
 }
 .container {
   margin-left: auto;
   margin-right: auto;
+  height: 600px;
+
+
 }
 header {
   margin-left: auto;
@@ -32,7 +35,7 @@ h1 {
   font-size: 70px;
   font-weight: 500;
   mix-blend-mode: overlay;
-  width: fixed 90%;
+  width: fixed 100%;
   text-align: center;
 }
 
@@ -155,7 +158,7 @@ il {
 #date {
   position: relative;
   margin-top: -30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: 0px;
   top: -30px;
   bottom: 20px;
@@ -165,6 +168,8 @@ il {
 }
 
 .comment {
+ 
+  margin-top: 10px;
   color: aliceblue;
   font-size: 15px;
   font-weight: 300;
@@ -177,8 +182,34 @@ il {
   margin-top: 40px;
   border: 3px;
   color: aliceblue;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  width: auto;
 }
+.col-2 {
+margin-right: 2px;
+margin-left: 2px;
+height: 140px;
+width: auto;
+}
+#forecast-row {
+  position: relative;
+  top: 20px;
+  width: auto;
+  margin: auto;
+  font-weight: 200px;
+  font-size: 14px ;  
+  padding: 30;
+  text-align: center;
+  justify-content: center; 
+}
+
+h5 {
+  font-size: 14px;
+}
+h6 img {
+  width: 60px;
+}
+
 section {
   display: inline-block;
   text-align: center;
@@ -188,11 +219,12 @@ section {
   color: aliceblue;
   font-size: 12px;
   font-weight: 300;
-  display: inline;
+  display: inline-block;
   margin: 0 auto;
   margin-bottom: 30px;
   position: relative;
-  bottom: -20px;
+  bottom: -440px;
+  top: 80px;
   text-decoration: none;
   width: fixed;
 }

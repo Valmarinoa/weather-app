@@ -26,14 +26,7 @@ todaysDate.innerHTML = formatDate(currentTime);
 */
 function formatTime(timestamp) {
   let date = new Date(timestamp);
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
+
   let days = [
     "sunday",
     "Monday",
@@ -44,7 +37,20 @@ function formatTime(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${formatForecastHours(timestamp)}`;
+}
+
+function formatForecastHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  return `${hours}:${minutes}`;
 }
 
 function showTemp(response) {
@@ -75,10 +81,12 @@ function displayForecast(response) {
   for (let index = 1; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-  <div class="col">
+  <div class="col-2">
         <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Wed</h5>
+                <h5 class="card-title">${formatForecastHours(
+                  forecast.dt * 1000
+                )}</h5>
                 <h6>
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
