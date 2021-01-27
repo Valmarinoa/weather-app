@@ -149,6 +149,7 @@ function currentPosition(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleCity);
+form.addEventListener("submit", toggleElements);
 
 let celTemp = null;
 
@@ -160,3 +161,12 @@ fahLink.addEventListener("click", showFahTemp);
 
 let celsius = document.querySelector("#centigrados");
 celsius.addEventListener("click", showCelTemp);
+
+function toggleElements() {
+  let extras = document.querySelector("#toggle-extras");
+  let units = document.querySelector("#units");
+  let searchInput = document.querySelector("#search-input").value;
+  extras.style.display = "block";
+  units.style.display = "inline-block";
+  `${searchInput.value}`.style.display = "none";
+}

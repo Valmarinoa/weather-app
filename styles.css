@@ -19,8 +19,6 @@ section {
   margin-left: auto;
   margin-right: auto;
   height: 600px;
-
-
 }
 header {
   margin-left: auto;
@@ -28,7 +26,7 @@ header {
 }
 h1 {
   margin-top: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   margin-right: 0px;
   display: inline-block;
   color: whitesmoke;
@@ -89,6 +87,8 @@ il {
 .weather-temperature {
   margin-left: auto;
   margin-right: auto;
+  justify-content: center; 
+
 }
 #temp {
   font-size: 90px;
@@ -113,6 +113,10 @@ il {
   position: relative;
   top: -50px;
   left: -10px;
+  display: none;
+}
+#units:target {
+  display: inline-block;
 }
 #units,
 #centigrados,
@@ -134,9 +138,14 @@ il {
   color: rgb(1, 236, 40);
   cursor: pointer;
 }
-
-#extras {
-  font-size: 14px;
+#toggle-extras {
+  display: none;
+}
+#toggle-extras:target {
+  display: inline-block;
+}
+.extras {
+  font-size: 15px;
   display: block;
   text-align: left;
   color: aliceblue;
@@ -156,25 +165,20 @@ il {
 }
 
 #date {
-  position: relative;
-  margin-top: -30px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  top: -30px;
-  bottom: 20px;
+  margin: 0 auto;
   color: aliceblue;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300;
+  display: block;
 }
 
 .comment {
- 
-  margin-top: 10px;
+  margin: 0;
   color: aliceblue;
   font-size: 15px;
   font-weight: 300;
 }
-.comment ::first-letter {
+.comment::first-letter {
   text-transform: capitalize;
 }
 .card {
