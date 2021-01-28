@@ -81,7 +81,7 @@ function displayForecast(response) {
   for (let index = 1; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-  <div class="col-2">
+  <div class="col-12 col-md-2">
         <div class="card">
               <div class="card-body">
                 <h5 class="card-title">${formatForecastHours(
@@ -165,8 +165,9 @@ celsius.addEventListener("click", showCelTemp);
 function toggleElements() {
   let extras = document.querySelector("#toggle-extras");
   let units = document.querySelector("#units");
-  let searchInput = document.querySelector("#search-input").value;
+  let searchInput = document.querySelector("#search-input");
   extras.style.display = "block";
   units.style.display = "inline-block";
-  `${searchInput.value}`.style.display = "none";
+  searchInput.style.display = "none";
+  searchInput.focus();
 }

@@ -11,52 +11,67 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/fab38228e4.js" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fab38228e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <section>
       <div class="container">
         <header>
-            <form id="search-form">   
-              <input id="search-input" type="text" placeholder="city" autocomplete="off" autofocus="on" id="search-input"/>
-          <button type="button" id="btn"><i class="fas fa-map-marker-alt"></i></button>
-      </form>
-            <h1></h1>
-            <il id="date"></il>
-            <div class="comment"></div>
-  
-          </header>
+          <form id="search-form">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="city"
+              autocomplete="off"
+              autofocus="on"
+              id="search-input"
+            />
+            <button type="button" id="btn">
+              <i class="fas fa-map-marker-alt"></i>
+            </button>
+          </form>
+          <h1></h1>
+          <il id="date"></il>
+          <div class="comment"></div>
+        </header>
         <div class="clearfix weather-temperature">
           <ul id="temperatureMain">
-              <il> 
-                  <span><img src=""
-                    alt=""
-                    id="icon"/></span>
-                  <span id="temp"></span> 
-                  <span id="units">
-                    <a href="#" id="centigrados">°C </a>|
-                    <a href="#" id="fahrenheit">°F</a>
-                  </span>
-              </il>
-                <ul id="toggle-extras" class="extras">
-                  <il><div id="humidity">Humidity: <span id="humidity-input">  </span>%</div></il>
-                  <il ><div id="wind">Wind: <span id="wind-input">  </span>km/h</div></il>
-                </ul>	
+            <il>
+              <span><img src="" alt="" id="icon" /></span>
+              <span id="temp"></span>
+              <span id="units">
+                <a href="#" id="centigrados">°C </a>|
+                <a href="#" id="fahrenheit">°F</a>
+              </span>
+            </il>
+            <ul id="toggle-extras" class="extras">
+              <il
+                ><div id="humidity">
+                  Humidity: <span id="humidity-input"> </span>%
+                </div></il
+              >
+              <il
+                ><div id="wind">
+                  Wind: <span id="wind-input"> </span>km/h
+                </div></il
+              >
+            </ul>
           </ul>
-        </div>   
-            <br>
-               
-              
-        <div class="row weather-forecast" id="forecast-row">
         </div>
-          <div class="repository"><a href="https://github.com/Valmarinoa" target="_blank" ><strong>Open-source code </strong></a> by Valmarinoa</div>
-          </section>
-   
-        </div>
-  
+        <br />
+        <div class="row weather-forecast" id="forecast-row"></div>
+      </div>
+      <div class="repository">
+        <a href="https://github.com/Valmarinoa" target="_blank"
+          ><strong>Open-source code </strong></a
+        >
+        by Valmarinoa
+      </div>
+    </section>
     <script src="script.js"></script>
-</div>
   </body>
 </html>

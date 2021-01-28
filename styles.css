@@ -18,7 +18,7 @@ section {
 .container {
   margin-left: auto;
   margin-right: auto;
-  height: 600px;
+  min-height: 600px;
 }
 header {
   margin-left: auto;
@@ -36,7 +36,6 @@ h1 {
   width: fixed 100%;
   text-align: center;
 }
-
 #search-form {
   background-color: transparent;
   width: auto;
@@ -83,17 +82,14 @@ il {
   margin-top: 90px;
   margin-left: 65px;
 }
-
 .weather-temperature {
   margin-left: auto;
   margin-right: auto;
-  justify-content: center; 
-
+  justify-content: center;
 }
 #temp {
   font-size: 90px;
 }
-
 #temperatureMain {
   display: inline;
   font-size: 70px;
@@ -128,12 +124,10 @@ il {
   text-decoration: none;
   color: aliceblue;
 }
-
 #centigrados:hover {
   color: rgb(1, 236, 40);
   cursor: pointer;
 }
-
 #fahrenheit:hover {
   color: rgb(1, 236, 40);
   cursor: pointer;
@@ -157,13 +151,11 @@ il {
   left: -100px;
   top: 53px;
   line-height: 12px;
-  tranlate
 }
 #humidity-input,
 #wind-input {
   font-weight: 400;
 }
-
 #date {
   margin: 0 auto;
   color: aliceblue;
@@ -171,7 +163,6 @@ il {
   font-weight: 300;
   display: block;
 }
-
 .comment {
   margin: 0;
   color: aliceblue;
@@ -183,17 +174,16 @@ il {
 }
 .card {
   background-color: rgba(239, 248, 254, 0.08);
-  margin-top: 40px;
   border: 3px;
   color: aliceblue;
   margin-bottom: 80px;
   width: auto;
 }
 .col-2 {
-margin-right: 2px;
-margin-left: 2px;
-height: 140px;
-width: auto;
+  margin-right: 2px;
+  margin-left: 2px;
+  height: 140px;
+  width: auto;
 }
 #forecast-row {
   position: relative;
@@ -201,23 +191,21 @@ width: auto;
   width: auto;
   margin: auto;
   font-weight: 200px;
-  font-size: 14px ;  
+  font-size: 14px;
   padding: 30;
   text-align: center;
-  justify-content: center; 
+  justify-content: center;
+  margin-top: 40px;
 }
-
 h5 {
   font-size: 14px;
 }
 h6 img {
   width: 60px;
 }
-
 section {
   display: inline-block;
   text-align: center;
-
 }
 .repository {
   color: aliceblue;
