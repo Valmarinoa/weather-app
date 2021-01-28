@@ -168,6 +168,5 @@ function toggleElements() {
   let searchInput = document.querySelector("#search-input");
   extras.style.display = "block";
   units.style.display = "inline-block";
-  searchInput.style.display = "none";
-  searchInput.focus();
+  `${searchInput.value}`.style.display = "none";
 }
