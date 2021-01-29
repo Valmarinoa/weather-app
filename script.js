@@ -72,6 +72,8 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   icon.setAttribute = ("alt", `${response.data.weather[0].description}`);
   celTemp = Math.round(response.data.main.temp);
+
+  }
 }
 
 function displayForecast(response) {
@@ -141,6 +143,11 @@ function showMyPosition(position) {
   let apiAdress = "https://api.openweathermap.org/data/2.5/weather?";
   let apiUrl = `${apiAdress}lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemp);
+
+  let apiForecastEndPoint =
+    "https://api.openweathermap.org/data/2.5/forecast?";
+  let apiUrlForecast = `${apiForecastEndPoint}lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrlForecast).then(displayForecast);
 }
 function currentPosition(event) {
   event.preventDefault();

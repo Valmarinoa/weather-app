@@ -39,6 +39,7 @@ h1 {
 #search-form {
   background-color: transparent;
   width: auto;
+  justify-content: center;
 }
 #search-input:focus {
   color: aliceblue;
@@ -89,6 +90,7 @@ il {
 }
 #temp {
   font-size: 90px;
+  justify-content: center;
 }
 #temperatureMain {
   display: inline;
@@ -98,12 +100,13 @@ il {
   mix-blend-mode: overlay;
   margin-top: 60px;
   position: relative;
-  left: 45px;
+  left: 30px;
   padding-left: 0%;
   width: fixed;
+  justify-content: center;
 }
 .weather-temperature #temp {
-  text-align: center;
+  justify-content: center;
 }
 #units {
   position: relative;
@@ -148,13 +151,16 @@ il {
   padding: 0;
   position: relative;
   float: right;
-  left: -100px;
-  top: 53px;
+  left: -170px;
+  top: 47px;
   line-height: 12px;
 }
 #humidity-input,
 #wind-input {
   font-weight: 400;
+}
+i {
+  margin-right: 4px;
 }
 #date {
   margin: 0 auto;
