@@ -100,7 +100,7 @@ il {
   mix-blend-mode: overlay;
   margin-top: 60px;
   position: relative;
-  left: 30px;
+  left: 28px;
   padding-left: 0%;
   width: fixed;
   justify-content: center;
@@ -168,6 +168,9 @@ i {
   font-size: 20px;
   font-weight: 300;
   display: block;
+}
+#date::first-letter {
+  text-transform: capitalize;
 }
 .comment {
   margin: 0;

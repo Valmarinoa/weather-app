@@ -1,29 +1,3 @@
-/*function formatDate(date) {
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  let dayIndex = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[dayIndex];
-  return `${day} ${hours}:${minutes}`;
-}
-let currentTime = new Date();
-let todaysDate = document.querySelector("#date");
-todaysDate.innerHTML = formatDate(currentTime);
-*/
 function formatTime(timestamp) {
   let date = new Date(timestamp);
 
@@ -72,8 +46,6 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   icon.setAttribute = ("alt", `${response.data.weather[0].description}`);
   celTemp = Math.round(response.data.main.temp);
-
-  }
 }
 
 function displayForecast(response) {
@@ -143,10 +115,8 @@ function showMyPosition(position) {
   let apiAdress = "https://api.openweathermap.org/data/2.5/weather?";
   let apiUrl = `${apiAdress}lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemp);
-
-  let apiForecastEndPoint =
-    "https://api.openweathermap.org/data/2.5/forecast?";
-  let apiUrlForecast = `${apiForecastEndPoint}lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  let apiForecastEndPoint = "https://api.openweathermap.org/data/2.5/forecast?";
+  let apiUrlForecast = `${apiForecastEndPoint}lat=${lat}&lon=${long}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrlForecast).then(displayForecast);
 }
 function currentPosition(event) {
@@ -162,6 +132,7 @@ let celTemp = null;
 
 let pin = document.querySelector("#btn");
 pin.addEventListener("click", currentPosition);
+pin.addEventListener("click", toggleElements);
 
 let fahLink = document.querySelector("#fahrenheit");
 fahLink.addEventListener("click", showFahTemp);
