@@ -35,11 +35,29 @@ h1 {
   mix-blend-mode: overlay;
   width: fixed 100%;
   text-align: center;
+  animation-duration: 2s ease-in-out;
 }
+
 #search-form {
   background-color: transparent;
   width: auto;
   justify-content: center;
+}
+.animate__animated.animate__slideInDown {
+  animation-duration: 2.7s ease-in-out;
+  animation-delay: 500ms;
+  animation-name: sliding;
+}
+
+@keyframes sliding {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 #search-input:focus {
   color: aliceblue;
@@ -75,7 +93,7 @@ h1 {
 }
 #btn:hover {
   color: rgb(1, 236, 40);
-  transform: scale(1.9, 1.9);
+  transform: scale(1.98, 1.98);
   cursor: pointer;
 }
 il {
@@ -228,6 +246,19 @@ section {
   top: 80px;
   text-decoration: none;
   width: fixed;
+}
+.animate__animated.animate__slideInUp {
+  animation-duration: 2.5s ease-in-out;
+  animation-name: rep;
+  animation-delay: 500ms;
+}
+@keyframes rep {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .repository:hover {
   text-decoration: none;
