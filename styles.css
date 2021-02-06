@@ -37,6 +37,10 @@ h1 {
   text-align: center;
   animation-duration: 2s ease-in-out;
 }
+.animate__animated.animate__fadeInDown {
+  animation-duration: 2s ease-in-out;
+  animation-delay: 300ms;
+}
 
 #search-form {
   background-color: transparent;
